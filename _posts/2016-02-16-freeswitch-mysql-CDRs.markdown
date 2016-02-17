@@ -3,6 +3,7 @@ layout: post
 title:  "Freeswitch 1.6 and MySQL CDRs on Debian 8"
 date:   2016-02-16 17:12:35 +0200
 categories: jekyll update
+comments: true
 ---
 1) You will need to isntall unixodbc & libmyodbc(I'm assuming that you already installed freeswitch and MySQL):
 {% highlight bash %}
@@ -242,3 +243,5 @@ freeswitch@internal>
 {% endhighlight %}
 
 13) On this point you CDRs should be writen to MySQL DB, if somehow you still do not get CDRs in DB, you need to check `/usr/local/freeswitch/log/freeswitch.log`
+
+{% include disqus.html %}
