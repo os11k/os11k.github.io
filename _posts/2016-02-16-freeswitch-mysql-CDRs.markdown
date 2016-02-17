@@ -244,4 +244,3 @@ freeswitch@internal>
 
 13) On this point you CDRs should be writen to MySQL DB, if somehow you still do not get CDRs in DB, you need to check `/usr/local/freeswitch/log/freeswitch.log`
 
-{% include disqus.html %}
