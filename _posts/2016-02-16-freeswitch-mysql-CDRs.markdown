@@ -189,43 +189,43 @@ cp /usr/src/freeswitch/src/mod/event_handlers/mod_odbc_cdr/conf/autoload_configs
 10) You need to create tables:
 {% highlight sql %}
 CREATE TABLE IF NOT EXISTS `cdr_table_a_leg` (
-`CallId` varchar(30) DEFAULT NULL,
-`orig_id` varchar(30) DEFAULT NULL,
-`term_id` varchar(30) DEFAULT NULL,
-`ClientId` varchar(30) DEFAULT NULL,
-`IP` varchar(30) DEFAULT NULL,
-`IPInternal` varchar(30) DEFAULT NULL,
-`CODEC` varchar(30) DEFAULT NULL,
-`directGateway` varchar(30) DEFAULT NULL,
-`redirectGateway` varchar(30) DEFAULT NULL,
-`CallerID` varchar(30) DEFAULT NULL,
-`TelNumber` varchar(30) DEFAULT NULL,
-`TelNumberFull` varchar(30) DEFAULT NULL,
-`sip_endpoint_disposition` varchar(30) DEFAULT NULL,
-`sip_current_application` varchar(30) DEFAULT NULL
+`CallId` varchar(80) DEFAULT NULL,
+`orig_id` varchar(80) DEFAULT NULL,
+`term_id` varchar(80) DEFAULT NULL,
+`ClientId` varchar(80) DEFAULT NULL,
+`IP` varchar(80) DEFAULT NULL,
+`IPInternal` varchar(80) DEFAULT NULL,
+`CODEC` varchar(80) DEFAULT NULL,
+`directGateway` varchar(80) DEFAULT NULL,
+`redirectGateway` varchar(80) DEFAULT NULL,
+`CallerID` varchar(80) DEFAULT NULL,
+`TelNumber` varchar(80) DEFAULT NULL,
+`TelNumberFull` varchar(80) DEFAULT NULL,
+`sip_endpoint_disposition` varchar(80) DEFAULT NULL,
+`sip_current_application` varchar(80) DEFAULT NULL
 );
 
 CREATE TABLE IF NOT EXISTS `cdr_table_b_leg` (
-`CallId` varchar(30) DEFAULT NULL,
-`orig_id` varchar(30) DEFAULT NULL,
-`term_id` varchar(30) DEFAULT NULL,
-`ClientId` varchar(30) DEFAULT NULL,
-`IP` varchar(30) DEFAULT NULL,
-`IPInternal` varchar(30) DEFAULT NULL,
-`CODEC` varchar(30) DEFAULT NULL,
-`directGateway` varchar(30) DEFAULT NULL,
-`redirectGateway` varchar(30) DEFAULT NULL,
-`CallerID` varchar(30) DEFAULT NULL,
-`TelNumber` varchar(30) DEFAULT NULL,
-`TelNumberFull` varchar(30) DEFAULT NULL,
-`sip_endpoint_disposition` varchar(30) DEFAULT NULL,
-`sip_current_application` varchar(30) DEFAULT NULL
+`CallId` varchar(80) DEFAULT NULL,
+`orig_id` varchar(80) DEFAULT NULL,
+`term_id` varchar(80) DEFAULT NULL,
+`ClientId` varchar(80) DEFAULT NULL,
+`IP` varchar(80) DEFAULT NULL,
+`IPInternal` varchar(80) DEFAULT NULL,
+`CODEC` varchar(80) DEFAULT NULL,
+`directGateway` varchar(80) DEFAULT NULL,
+`redirectGateway` varchar(80) DEFAULT NULL,
+`CallerID` varchar(80) DEFAULT NULL,
+`TelNumber` varchar(80) DEFAULT NULL,
+`TelNumberFull` varchar(80) DEFAULT NULL,
+`sip_endpoint_disposition` varchar(80) DEFAULT NULL,
+`sip_current_application` varchar(80) DEFAULT NULL
 );
 
 CREATE TABLE IF NOT EXISTS `cdr_table_both` (
-`CallId` varchar(30) DEFAULT NULL,
-`orig_id` varchar(30) DEFAULT NULL,
-`TEST_id` varchar(30) DEFAULT NULL
+`CallId` varchar(80) DEFAULT NULL,
+`orig_id` varchar(80) DEFAULT NULL,
+`TEST_id` varchar(80) DEFAULT NULL
 );
 {% endhighlight %}
 
@@ -242,5 +242,6 @@ true
 freeswitch@internal>
 {% endhighlight %}
 
-13) On this point you CDRs should be writen to MySQL DB, if somehow you still do not get CDRs in DB, you need to check `/usr/local/freeswitch/log/freeswitch.log`
-
+13) On this point you CDRs should be writen to MySQL DB, if somehow you still do not get CDRs in DB, you need to check `/usr/local/freeswitch/log/freeswitch.log`. 
+Keep in mind that you might need to add some additional fields to DB and update `odbc_cdr.conf.xml` accordingly. Please take a closer look on data type used in 
+CDRs table, probably it is not optimal and  you might need to update it.
