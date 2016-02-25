@@ -91,4 +91,4 @@ WORKDIR=/usr/local/freeswitch/log
 update-rc.d freeswitch defaults
 {% endhighlight %}
 
-11) Please do not forget to change default password for default extension in /usr/local/freeswitch/conf/vars.xml
+11) Please do not forget to change default password for default extensions in /usr/local/freeswitch/conf/vars.xml
