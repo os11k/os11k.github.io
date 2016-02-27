@@ -5,12 +5,13 @@ date:   2016-02-16 17:12:35 +0200
 categories: jekyll update
 comments: true
 ---
-1) You will need to isntall unixodbc & libmyodbc(I'm assuming that you already installed freeswitch and MySQL):
+In this manual I will try to explain what you need to do to get freeswitch CDRs saved to MySQL. On this point I assume that freeswitch and MySQL are installed already.
+1) First we will need to isntall unixodbc & libmyodbc, by running following command:
 {% highlight bash %}
 apt-get install unixodbc libmyodbc
 {% endhighlight %}
 
-2) You will need to update /etc/odbcinst.ini:
+2) Please update /etc/odbcinst.ini:
 {% highlight bash %}
 [MySQL]
 Description = ODBC for MySQL
@@ -19,7 +20,7 @@ Setup = /usr/lib/x86_64-linux-gnu/odbc/libodbcmyS.so
 FileUsage = 1
 {% endhighlight %}
 
-3) You will need to update /etc/odbc.ini accordingly, in my example MySQL are running on same server where freeswitch, DB name, username and password is freeswitch, change it accordingly.
+3) At this point please update /etc/odbc.ini accordingly, in my example MySQL are running on same server where freeswitch, DB name, username and password is freeswitch in my case, you will need to change it accordingly.
 {% highlight bash %}
 [freeswitch]
 Description           = MySQL connection to 'freeswitch' database
@@ -32,7 +33,7 @@ Port                  = 3306
 Socket                = /var/run/mysqld/mysqld.sock
 {% endhighlight %}
 
-4) Now we need to test that `echo "select 1" | isql -v freeswitch` if you set-up ODBC correctly output should be similar to what is below:
+4) Now we need to test that if you set-up ODBC correctly, please run `echo "select 1" | isql -v freeswitch` in shell, you should get something similar to what you see below:
 {% highlight bash %}
 +---------------------------------------+
 | Connected!                            |
@@ -74,12 +75,12 @@ make
 make install
 {% endhighlight %}
 
-7) You need to copy odbc_cdr.conf.xml to freeswich conf directory, I'm assuming that freeswitch source directory is `/usr/src/freeswitch`
+7) At this point we need to copy odbc_cdr.conf.xml to freeswich conf directory, I'm assuming that freeswitch source directory is `/usr/src/freeswitch`
 {% highlight bash %}
 cp /usr/src/freeswitch/src/mod/event_handlers/mod_odbc_cdr/conf/autoload_configs/odbc_cdr.conf.xml /usr/local/freeswitch/conf/autoload_configs/odbc_cdr.conf.xml
 {% endhighlight %}
 
-8) You need to update `/usr/local/freeswitch/conf/autoload_configs/odbc_cdr.conf.xml` accordingly so it points to mysql DB(line No4):
+8) Please update `/usr/local/freeswitch/conf/autoload_configs/odbc_cdr.conf.xml` accordingly so it points to mysql DB(line No4):
 {% highlight bash linenos=table %}
 <configuration name="odbc_cdr.conf" description="ODBC CDR Configuration">
   <settings>
@@ -141,7 +142,7 @@ cp /usr/src/freeswitch/src/mod/event_handlers/mod_odbc_cdr/conf/autoload_configs
 </configuration>
 {% endhighlight %}
 
-9) You need to enable auto-load of mod_odbc_cdr. For this you need to edit /usr/local/freeswitch/conf/autoload_configs/modules.conf.xml and add `<load module="mod_odbc_cdr"/>` on top of `<load module="mod_cdr_csv"/>`. In my minimal set-up it looks in following way(line No12):
+9) Please enable auto-load of mod_odbc_cdr. For this you need to edit /usr/local/freeswitch/conf/autoload_configs/modules.conf.xml and add `<load module="mod_odbc_cdr"/>` on top of `<load module="mod_cdr_csv"/>`. In my minimal set-up it looks in following way(line No12):
 {% highlight bash linenos=table %}
 <configuration name="modules.conf" description="Modules">
   <modules>
@@ -186,7 +187,7 @@ cp /usr/src/freeswitch/src/mod/event_handlers/mod_odbc_cdr/conf/autoload_configs
 </configuration>
 {% endhighlight %}
 
-10) You need to create tables:
+10) Now we need to create tables:
 {% highlight sql %}
 CREATE TABLE IF NOT EXISTS `cdr_table_a_leg` (
 `CallId` varchar(80) DEFAULT NULL,
@@ -229,7 +230,7 @@ CREATE TABLE IF NOT EXISTS `cdr_table_both` (
 );
 {% endhighlight %}
 
-11) You need to restart freeswitch: `service freeswitch restart`
+11) Please restart freeswitch: `service freeswitch restart`
 
 12) On this point you can check if module `mod_odbc_cdr` loaded. Please run following command in freeswitch CLI:
 {% highlight bash %}
@@ -242,6 +243,6 @@ true
 freeswitch@internal>
 {% endhighlight %}
 
-13) On this point you CDRs should be writen to MySQL DB, if somehow you still do not get CDRs in DB, you need to check `/usr/local/freeswitch/log/freeswitch.log`. 
+13) On this point you CDRs should be written to MySQL DB, if somehow you still do not get CDRs in DB, you need to check `/usr/local/freeswitch/log/freeswitch.log` for errors or any other hints. 
 Keep in mind that you might need to add some additional fields to DB and update `odbc_cdr.conf.xml` accordingly. Please take a closer look on data type used in 
 CDRs table, probably it is not optimal and  you might need to update it.
