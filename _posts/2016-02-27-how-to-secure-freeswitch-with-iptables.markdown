@@ -37,7 +37,7 @@ Below is simple iptables rules, for our case:
 COMMIT
 {% endhighlight %}
 
-1) Check rules above, line 8, change 1.2.3.4 to your office network ip.
+1) In rules above, line 8, change 1.2.3.4 to your office network ip.
 
 2) In rules above I'm assuming that Freeswitch is using default RTP ports 16384-32768. You can check what ports is used in 
 `/usr/local/freeswitch/conf/autoload_configs/switch.conf.xml` if no ports are set, then it is default ports, what we are using in above rules. 
