@@ -5,8 +5,7 @@ date:   2016-02-23 15:38:00 +0200
 categories: jekyll update
 comments: true
 ---
-I compiled this manual from several official Freeswitch documentation pages, which is great place to start, but it is missing some crucial parts for beginner. 
-(For example it is missing very important post installation steps: how to create freeswitch user, how to create init script and etc).
+I compiled this manual from several official Freeswitch documentation pages, which is great place to start, but all of them are missing full steps - for example latest one at this time is missing post installation steps, but it is covered in older documentation, what is fine, but sometimes is hard to find, so I believe it will be nice to have all of this info just in one page. :)
 
 1) We will need to install dependencies:
 {% highlight bash %}
