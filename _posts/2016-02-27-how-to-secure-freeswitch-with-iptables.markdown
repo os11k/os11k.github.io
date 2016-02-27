@@ -5,7 +5,7 @@ date:   2016-02-27 16:28:00 +0200
 categories: jekyll update
 comments: true
 ---
-Today we will discuss how to secure your Freeswitch(or it can be aby other PBX) with iptables. This is very simple, but nevertheless is very effective way to protect your PBX. 
+Today we will discuss how to secure your Freeswitch(or it can be any other PBX) with iptables. This is very simple, but nevertheless is very effective way to protect your PBX. 
 We are assuming that you do not need to access your PBX from whole internet. In most cases you just need to access your PBX from your office 
 where most phones should be located and I assume that your office network have static IP, in our case let it be 1.2.3.4.
 
@@ -18,7 +18,7 @@ I'm assuming that you are running Debian 8 and you will plan to use Flowroute
 ![Diagram]({{ site.url }}/assets/freeswitch.png)
 
 On this point we need to generate iptables rules, as you see from diagram above, we need to allow connection to our server from 3 ip-addresses. 
-Below is simple iptables rules, for this case:
+Below is simple iptables rules, for our case:
 {% highlight bash linenos=table %}
 *filter
 :INPUT ACCEPT [0:0]
@@ -45,7 +45,7 @@ If you are using other PBX, then check manual and change port range accordingly(
 
 3) If you are using different then Flowroute provider, update lines 6 & 7 accordingly.
 
-4) On this point when our rules are ready, please save them under `/etc/iptables.up.rules`
+4) On this point when our rules are ready, please save rules to `/etc/iptables.up.rules`
 
 5) Run following command to load them:
 {% highlight bash %}
