@@ -7,9 +7,9 @@ comments: true
 ---
 Today we will discuss how to secure your Freeswitch(or it can be any other PBX) with iptables. This is very simple, but nevertheless is very effective way to protect your PBX. 
 We are assuming that you do not need to access your PBX from whole internet. In most cases you just need to access your PBX from your office 
-where most phones should be located and I assume that your office network have static IP, in our case let it be 1.2.3.4.
+where most phones should be located and I assume that your office network has static IP, in our case let it be 1.2.3.4.
 
-Think twice before allowing everybody to be able to reach your PBX.
+**Think twice before opening your PBX to everybody in internet.**
 
 I'm assuming that you already installed Freeswitch, as it was described in my previous manual.
 I'm assuming that you are running Debian 8 and you will plan to use Flowroute
