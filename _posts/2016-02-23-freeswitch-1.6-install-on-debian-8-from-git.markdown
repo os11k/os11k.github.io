@@ -90,4 +90,9 @@ WORKDIR=/usr/local/freeswitch/log
 update-rc.d freeswitch defaults
 {% endhighlight %}
 
-11) Please do not forget to change default password for default extensions in /usr/local/freeswitch/conf/vars.xml
+11) You can start freeswitch:
+{% highlight bash %}
+service freeswitch start
+{% endhighlight %}
+
+12) On this point you have up and running freeswitch, please do not forget to change default password for default extensions in /usr/local/freeswitch/conf/vars.xml
