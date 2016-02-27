@@ -5,7 +5,8 @@ date:   2016-02-16 17:12:35 +0200
 categories: jekyll update
 comments: true
 ---
-In this manual I will try to explain what you need to do to get freeswitch CDRs saved to MySQL. On this point I assume that freeswitch and MySQL are installed already.
+In this manual I will try to explain what you need to do, to get freeswitch CDRs saved to MySQL. On this point I assume that freeswitch and MySQL are installed already.
+
 1) First we will need to isntall unixodbc & libmyodbc, by running following command:
 {% highlight bash %}
 apt-get install unixodbc libmyodbc
@@ -20,7 +21,7 @@ Setup = /usr/lib/x86_64-linux-gnu/odbc/libodbcmyS.so
 FileUsage = 1
 {% endhighlight %}
 
-3) At this point please update /etc/odbc.ini accordingly, in my example MySQL are running on same server where freeswitch, DB name, username and password is freeswitch in my case, you will need to change it accordingly.
+3) In my example MySQL is running on same server where freeswitch, please change `localhost` to your ip-address if MySQL DB is on separate machine. DB name, username and password is freeswitch in my case, but you will need to update it accordingly. When you are ready with config, please save it to `/etc/odbc.ini`.
 {% highlight bash %}
 [freeswitch]
 Description           = MySQL connection to 'freeswitch' database
@@ -33,7 +34,7 @@ Port                  = 3306
 Socket                = /var/run/mysqld/mysqld.sock
 {% endhighlight %}
 
-4) Now we need to test that if you set-up ODBC correctly, please run `echo "select 1" | isql -v freeswitch` in shell, you should get something similar to what you see below:
+4) Now we need to test if you set-up ODBC correctly, please run `echo "select 1" | isql -v freeswitch` in shell, you should get something similar to what you see below:
 {% highlight bash %}
 +---------------------------------------+
 | Connected!                            |
@@ -80,7 +81,7 @@ make install
 cp /usr/src/freeswitch/src/mod/event_handlers/mod_odbc_cdr/conf/autoload_configs/odbc_cdr.conf.xml /usr/local/freeswitch/conf/autoload_configs/odbc_cdr.conf.xml
 {% endhighlight %}
 
-8) Please update `/usr/local/freeswitch/conf/autoload_configs/odbc_cdr.conf.xml` accordingly so it points to mysql DB(line No4):
+8) Please update `/usr/local/freeswitch/conf/autoload_configs/odbc_cdr.conf.xml` accordingly so it points to MySQL DB(line No4). In line no 4 `freeswitch` is connection name or value in square brackets in first line of `/etc/odbc.ini`:
 {% highlight bash linenos=table %}
 <configuration name="odbc_cdr.conf" description="ODBC CDR Configuration">
   <settings>
