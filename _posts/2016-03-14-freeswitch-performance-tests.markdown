@@ -80,7 +80,7 @@ SEQUENTIAL
 1009;10.0.0.10;[authentication username=1009 password=1234]
 {% endhighlight %}
 
-6) Let's try scenario for registration. Please change `local_ip_address` with your SIPp server ip-address and `destination_ip_address` with Freeswitch ip-address.
+7) Let's try scenario for registration. Please change `local_ip_address` with your SIPp server ip-address and `destination_ip_address` with Freeswitch ip-address.
 `-r 1 -rp 1000` is 1 registration per 1000 milliseconds, so we will try 1 registration every second. `-aa` means that we will ignore NOTIFY from Freeswitch.
 {% highlight bash %}
 cd /usr/src/sipp
@@ -116,20 +116,20 @@ sipp: There were more errors, see '/usr/src/sipp2freeswitch/register_9906_errors
 {% endhighlight %}
 As we can see that we sent 30 registration and all of them was successful, there was some errors, as you can see, but this is about NOTIFY which sends Freeswitch, so this is not very important. :)
 
-7) Now you can try to send more registrations by increasing `-r 1` to `-r 30`, what means that now we will send 30 registrations per second.
+8) Now you can try to send more registrations by increasing `-r 1` to `-r 30`, what means that now we will send 30 registrations per second.
 {% highlight bash %}
 ./sipp -i local_ip_address -sf /usr/src/sipp2freeswitch/register.xml -inf /usr/src/sipp2freeswitch/register-accounts.csv destination_ip_address:5060 -r 30 -rp 1000 -aa -trace_err
 {% endhighlight %}
 After several rounds of increasing `-r` value you should get understanding how much your Freeswitch system can handle and you should compare it with your requirements and if 
 necessary adjust performance settings of Freeswitch and if necessary adding more memory and CPUs to Freeswitch server.
 
-8) Let's try second scenario:
+9) Let's try second scenario:
 {% highlight bash %}
 ./sipp -i local_ip_address -sf /usr/src/sipp2freeswitch/invite-auth.xml -inf /usr/src/sipp2freeswitch/invite-accounts.csv destination_ip_address:5060 -r 1 -rp 5000
 {% endhighlight %}
 This command will trigger 1 call each 5 seconds. After some time you can push `q`.
 
-9) After exiting you should see something similar to:
+10) After exiting you should see something similar to:
 {% highlight bash %}
 ----------------------------- Statistics Screen ------- [1-9]: Change Screen --
   Start Time             | 2016-03-14   08:08:44.911128 1457957324.911128
@@ -156,5 +156,5 @@ This command will trigger 1 call each 5 seconds. After some time you can push `q
 As you can see we created 30 calls and all of them was successful. Now you can try to increase `-r` value to 5-10-20-30-... and decrease `-rp` value to 1000, what is one second, if needed. 
 At the end you should understand how much call setup per second your server are able to support.
 
-10) At this point you should have some basic understanding how to make performance tests using SIPp. Keep in mind it is always good idea to make some calls and test quality of call while loading Freeswitch with SIPp, 
+11) At this point you should have some basic understanding how to make performance tests using SIPp. Keep in mind it is always good idea to make some calls and test quality of call while loading Freeswitch with SIPp, 
 so you can confirm that call quality is not impacted by your load.
