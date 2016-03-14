@@ -19,7 +19,7 @@ cd /usr/src/
 git clone https://github.com/SIPp/sipp.git
 {% endhighlight %}
 
-3) Now we need to compile SIPp. Option --with-pcap will gave us possibility to send media:
+3) Now we need to compile SIPp. Option `--with-pcap` will gave us possibility to send media:
 {% highlight bash %}
 cd ./sipp/
 ./build.sh --with-pcap
@@ -61,8 +61,8 @@ git clone https://github.com/os11k/sipp2freeswitch.git
 `SEQUENTIAL` which means in what order we should try accounts, possible options are:  RANDOM, SEQUENTIAL, and USER. We will stick with `SEQUENTIAL`. 2-4 lines are comments. 
 Lines 5-14 will have information about each account what we can use, in our case we will use 1000-1009 extensions and password 1234
 (this is default extensions and password for Freeswitch, you should never use it in production). You should change 10.0.0.10 with your Freeswitch server IP and change extensions and passwords to yours.
-File `/usr/src/sipp2freeswitch/invite-accounts.csv` will have completely same file, but lines 5-14 will have `;9196;` at the end what will be destination number where SIPp will call, 
-in default Freeswitch installation 9196 is echo test. In your case you will need to change this too.
+File `/usr/src/sipp2freeswitch/invite-accounts.csv` will have completely same content, but lines 5-14 will have `;9196;` at the end what will be destination number where SIPp will call, 
+in default Freeswitch installation 9196 is echo test.
 {% highlight bash linenos=table %}
 SEQUENTIAL
 # Username: 1000-1009
