@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Freeswitch 1.6 install on Debian 8 from git"
-date:   2016-02-23 15:38:00 +0200
+date:   2016-02-23 19:38:00 +0200
 categories: jekyll update
 comments: true
 ---

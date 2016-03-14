@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Freeswitch 1.6 and MySQL CDRs on Debian 8"
-date:   2016-02-16 17:12:35 +0200
+date:   2016-02-16 19:12:35 +0200
 categories: jekyll update
 comments: true
 ---
 In this manual I will try to explain what you need to do, to get freeswitch CDRs saved to MySQL. On this point I assume that freeswitch and MySQL are installed already.
 
-1) First we will need to isntall unixodbc & libmyodbc, by running following command:
+1) First we will need to install unixodbc & libmyodbc, by running following command:
 {% highlight bash %}
 apt-get install unixodbc libmyodbc
 {% endhighlight %}
