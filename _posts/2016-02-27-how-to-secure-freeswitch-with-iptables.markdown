@@ -14,6 +14,7 @@ where most phones should be located and I assume that your office network has st
 I'm assuming that you already installed Freeswitch, as it was described in my previous manual.
 I'm assuming that you are running Debian 8 and you will plan to use Flowroute
 (You can use any provider, in this manual I will use Flowroute ip-addresses as example) for calling in and out.
+In below rules is used port 5060, what usually belongs to internal profile, if you configure gateway in external profile, please change port to 5080.
 
 ![Diagram]({{ site.url }}/assets/freeswitch.png)
 
