@@ -92,7 +92,7 @@ log_stderror=no
 {% endhighlight %}
 Additionally you might increase or decrease debug values from 1 to 4, higher value for more debug.
 
-6) Kamailio config has 3 parts: global settings, modules settings and routing blocks.
+5) Kamailio config has 3 parts: global settings, modules settings and routing blocks.
 In global settings part you can define WITH_DEBUG for example, configure ports, ip-addresses and protocols on which kamailio is listening. 
 In module part are listed all used modules and listed modules configurations. In routing part there is several routing blocks. 
 
@@ -101,7 +101,7 @@ All request first hit `request_route` and from there they might jump to other ro
 If sub-routes are not finished with exit or drop command, then it returns back to route from where it was invoked, 
 you can put return command at the end of sub-route and it is almost the same behavior.
 
-7) `t_relay()` function will send out SIP request out of Kamailio. If you have any failure routes, then this failure routes will be executed inside this function.
+6) `t_relay()` function will send out SIP request out of Kamailio. If you have any failure routes, then this failure routes will be executed inside this function.
 `sl_send_reply()` function will send reply. For example if request URI is empty we reply that address is incomplete:
 
 {% highlight bash %}
@@ -113,7 +113,7 @@ if ($rU==$null) {
 {% endhighlight %}
 All responses will hit `reply_route`, where we can either drop reply or to forward it.
 
-8) AVP is an array(but let assume it is simple variable so we are not confused with all flexibility) which attached to SIP transaction. 
+7) AVP is an array(but let assume it is simple variable so we are not confused with all flexibility) which attached to SIP transaction. 
 In case if we need to save some value and later on we can use it during same transaction, for example in default config we will save user from request URI:
 {% highlight bash %}
 $avp(oexten) = $rU;
@@ -155,7 +155,7 @@ if($fu==”aaa”) {
 {% endhighlight %}
 It is not recommended to use `msg_apply_changes()` very often, cause it may impact performance. It is recommended to use `uac_replace_from()` function for updating caller-id.
 
-9) Kamctl is powerful tool and below you can find my most common used commands.
+8) Kamctl is powerful tool and below you can find my most common used commands.
 {% highlight bash %}
 kamctl fifo debug            #will return current debug level.
 kamctl fifo debug 4          #will increase debug level to max without restart.
