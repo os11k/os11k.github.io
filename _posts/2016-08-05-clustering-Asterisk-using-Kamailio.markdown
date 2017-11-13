@@ -114,6 +114,6 @@ so I recommend to put 60 seconds re-registration timeout on all extensions.
 17) This is very simple and easy cluster set-up of Asterisk, off cause there are dozens other options, what include register server on 
 Kamailio side, using DUNDi and etc. You can even skip Kamailio and use DNS based fail-over, just make sure that your SIP clients support DNS SRV records.
 
-18) In following set-up single point of failure is Asterisk and MySQL DB. For MySQL you can use some-kind cluster(Galera, Percona), there is dozens manuals 
+18) In following set-up single point of failure is Kamailio and MySQL DB. For MySQL you can use some-kind cluster(Galera, Percona), there is dozens manuals 
 online. For Kamailio you can have some-kind fail-over set-up too. I hope this article was help-full and I really do not intended to answer all 
 question, but I just wanted to provide simple manual for cluster set-up from where you can start to build up your set-up.
