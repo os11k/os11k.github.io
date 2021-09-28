@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to Stop DDoS attacks in VoIP/SIP using Kamailio"
-date:   2021-09-21 18:55:00 +0200
+date:   2021-09-28 18:55:00 +0200
 categories: jekyll update
 comments: true
 ---
