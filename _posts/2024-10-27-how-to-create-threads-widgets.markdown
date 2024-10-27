@@ -8,7 +8,7 @@ comments: true
 
 This post will be a bit different. I recently started using Meta Threads, and I saw someone complaining that Meta should create a widget for certain stats. I replied, saying it should be possible using the Scriptable app. Long story short, I decided to dive into this rabbit hole and create some widgets for Meta Threads. I’ll be creating two widgets—one for follower counts and profile visitors for today and yesterday, and a second widget to display view counts for the latest post. I’ll be using the Scriptable app to make these, which you can download for free from the iOS App Store.
 
-![Diagram]({{ site.url }}/assets/threads_widget/0.jpg)
+<img src="{{ site.url }}/assets/threads_widget/0.jpg" alt="Diagram" style="width: 25%;">
 
 ### Step 1: Set Up the Meta App
 
