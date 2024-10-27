@@ -122,6 +122,10 @@ Once the token is in iCloud, we’re ready to build the main widget.
 
 ### Building the Widgets
 
+Documentation from Meta used for the main widget:
+
+[Meta Threads Insights Documentation](https://developers.facebook.com/docs/threads/insights/)
+
 For the main widget, I’m using the following endpoints for followers and profile visitors:
 
 **Followers:**
@@ -134,13 +138,13 @@ https://graph.threads.net/v1.0/me/threads_insights?metric=followers_count&access
 https://graph.threads.net/v1.0/me/threads_insights?metric=views&access_token=zzz
 {% endhighlight %}
 
-Full code for the main widget is here:
+You can find the full code for the main widget here:
 
 [Main Widget Code](https://gist.github.com/os11k/1f109155706ce2bef8b68ea61a324126)
 
-The secondary widget checks the latest post, and if a post exists with stats (since reposts have no views), it displays the view count and a snippet of the post. For reposts, it shows 0.
+The secondary widget checks the latest post, and if a post exists with stats (since reposts have no views), it displays the view count and a snippet of the post. For reposts, it’ll just show 0.
 
-Documentation for this setup is here:
+Documentation from Meta for this part is here:
 
 [Meta Threads Documentation](https://developers.facebook.com/docs/threads/threads-media)
 
@@ -159,3 +163,4 @@ Here’s the full code for the secondary widget:
 [Secondary Widget Code](https://gist.github.com/os11k/583b8513b8abe1aa902c3d05f90ac8f7)
 
 And that’s it! After following these steps, you should have a working Threads widget.
+
