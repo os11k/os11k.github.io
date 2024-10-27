@@ -52,7 +52,7 @@ Finally, click **"Finish Customization"**.
 
 Now, go to **"App Roles"** and then to **"Roles"**.
 
-![Diagram]({{ site.url }}/assets/threads_widget/9.png)
+<img src="{{ site.url }}/assets/threads_widget/9.png" alt="Diagram" style="width: 25%;">
 
 Click **"Add People"** and select **"Threads Tester."** Below that, add your own user, as shown in the screenshot:
 
