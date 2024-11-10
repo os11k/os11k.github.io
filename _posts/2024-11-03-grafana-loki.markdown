@@ -1,7 +1,7 @@
 ---
 layout: post  
 title: "Using Grafana Loki as a Centralized Logging Solution"  
-date: 2024-11-10 18:40:00 +0200
+date: 2024-11-10 18:20:00 +0200
 categories: jekyll update  
 comments: true  
 ---
