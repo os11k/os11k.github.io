@@ -139,7 +139,7 @@ Loki doesn’t pull logs; instead, Docker pushes logs to Loki. Ensure Docker can
 telnet loki-ip 3100
 {% endhighlight %}
 
-## Viewing Logs in Grafana
+## Step 3: Viewing Logs in Grafana
 
 Now you should be able to see logs in Grafana. Go to the "Explore" section, and make sure "Loki" is selected in the top-left dropdown menu:
 
