@@ -3,8 +3,6 @@ layout: page
 title: About
 permalink: /about/
 ---
-Jurijs Ivolga
+Hi, I’m Jurijs.
 
-15+ years in VoIP/SIP
-
-I hope here you will find useful information regarding Asterisk, Freeswitch, Kamailio, VoIP and etc.
+With almost 20 years in IT, I’ve worked on everything from VoIP and SIP to tackling broader tech challenges. This blog is where I share what I’ve learned along the way—whether it’s about Freeswitch, coding, or solving everyday IT puzzles.
