@@ -55,7 +55,7 @@ minima:
   #  - { platform: dribbble,       user_url: "https://dribbble.com/jekyll" }
   #  - { platform: facebook,       user_url: "https://www.facebook.com/jekyll" }
   #  - { platform: flickr,         user_url: "https://www.flickr.com/photos/jekyll" }
-    - { platform: threads,        user_url: "https://www.threads.net/@jurijs_iv" }
+    - { platform: threads,        user_url: "https://www.threads.com/@jurijs_iv" }
     - { platform: bluesky,        user_url: "https://bsky.app/profile/cyberpunk.tools" }
     - { platform: linkedin,       user_url: "https://www.linkedin.com/in/jurijs-ivolga/" }
     - { platform: github,         user_url: "https://github.com/os11k" }
