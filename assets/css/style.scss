@@ -5,3 +5,23 @@
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
+
+// Custom styles
+.support-section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  text-align: center;
+}
+
+.support-section p {
+  margin-bottom: 1rem;
+}
+
+.support-section img {
+  max-width: 240px;
+  height: auto;
+}
