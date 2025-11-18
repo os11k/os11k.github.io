@@ -25,11 +25,11 @@ All of this is beyond this short manual. Here I'll just explain how to route a c
 
 ## Requirements
 
-You'll need an account in ElevenLabs, where you'll create or use an existing agent. For my test, I used the default public agent. Your agent should be configured for PCM 16000 Hz. You'll need to grab your Agent ID—we'll need it later.
+You'll need an account in ElevenLabs, where you'll create or use an existing agent. For my test, I used the default public agent. Your agent should be configured for PCM 16000 Hz. You'll need to grab your Agent ID - we'll need it later.
 
 ## Installing FreeSWITCH with mod_audio_stream
 
-I prefer a dockerized environment, and in my lab I used Docker—we'll use it extensively here.
+I prefer a dockerized environment, and in my lab I used Docker - we'll use it extensively here.
 
 To install FreeSWITCH, we'll use my project:
 
