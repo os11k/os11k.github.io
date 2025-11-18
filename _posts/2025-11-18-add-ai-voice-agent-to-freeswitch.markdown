@@ -1,9 +1,10 @@
----  
+---
 layout: post
-title: "Add AI Voice Agent to FreeSWITCH in 30 Minutes"  
+title: "Add AI Voice Agent to FreeSWITCH in 30 Minutes"
 date: 2025-11-18 10:00:00 +0200
-categories: jekyll update  
-comments: true  
+categories: jekyll update
+comments: true
+image: /assets/ai.png
 ---
 
 ### Overview
