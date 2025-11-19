@@ -4,6 +4,7 @@ title: "How to Store Terraform State in Azure with a Bit More Security in Mind"
 date: 2025-02-15 19:00:00 +0200
 categories: jekyll update
 comments: true
+image: /assets/azure-storage/3.png
 ---
 
 ## Thank You "Ned in the Cloud"

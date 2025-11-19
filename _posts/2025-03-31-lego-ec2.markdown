@@ -4,6 +4,7 @@ title: "How to manage Let's Encrypt certificate on EC2 instance"
 date: 2025-03-31 10:00:00 +0200
 categories: jekyll update  
 comments: true  
+image: /assets/lego-ec2/2.png
 ---
 
 In this guide, I’ll provide a short manual on how to create and manage Let’s Encrypt certificates on your EC2 instance using [Lego](https://go-acme.github.io/lego/) (a Let's Encrypt/ACME client and library written in Go). We’ll use the DNS-01 challenge, and the instance will have an appropriate IAM role so only the instance itself can manage the `_acme-challenge` TXT record for the domain.

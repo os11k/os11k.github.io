@@ -3,7 +3,8 @@ layout: post
 title: "Best WordPress Cache Plugin"  
 date: 2025-04-30 10:00:00 +0200
 categories: jekyll update  
-comments: true  
+comments: true
+image: /assets/wordpress-cloudflare/7.webp
 ---
 
 ### Overview

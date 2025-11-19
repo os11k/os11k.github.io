@@ -4,6 +4,7 @@ title: "How to Substitute SSH with AWS Session Manager"
 date: 2025-01-07 18:35:00 +0200
 categories: jekyll update
 comments: true
+image: /assets/ssm.png
 ---
 
 In this article, I will explore AWS Systems Manager Session Manager and how anyone can use it as an alternative to SSH.
