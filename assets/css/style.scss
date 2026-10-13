@@ -6,22 +6,81 @@
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
 
-// Custom styles
-.support-section {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  border-radius: 8px;
-  background-color: #f8f9fa;
-  border: 1px solid #e9ecef;
-  text-align: center;
+// StatusAlert promo card (bottom-right pop-up, minimizes to a small pill)
+.sa-promo {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  max-width: 320px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-left: 4px solid #2e7d32;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  padding: 14px 36px 14px 16px;
+  color: #333;
+  font-size: 0.9em;
+  line-height: 1.4;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
-.support-section p {
-  margin-bottom: 1rem;
+.sa-promo.sa-visible { opacity: 1; transform: none; }
+.sa-promo.sa-minimized { transform: translateX(calc(100% + 40px)); }
+.sa-promo h4 { margin: 0 0 6px; font-size: 1em; font-weight: bold; }
+.sa-promo p { margin: 0 0 10px; }
+.sa-promo .sa-cta {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #2e7d32;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
 }
-
-.support-section img {
-  max-width: 240px;
-  height: auto;
+.sa-promo .sa-cta:hover { background-color: #256628; color: #fff; text-decoration: none; }
+.sa-promo .sa-close {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  margin: 0;
+  padding: 2px 6px;
+  border: 0;
+  background: none;
+  font-size: 20px;
+  line-height: 1;
+  color: #888;
+  cursor: pointer;
+}
+.sa-promo .sa-close:hover { color: #333; }
+.sa-promo-mini {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  margin: 0;
+  padding: 8px 14px;
+  background-color: #2e7d32;
+  color: #fff;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-size: 0.85em;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+}
+.sa-promo-mini:hover { background-color: #256628; }
+@media (max-width: 600px) {
+  .sa-promo {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: none;
+    border-radius: 0;
+    border-left: 0;
+    border-top: 4px solid #2e7d32;
+  }
+  .sa-promo-mini { right: 12px; bottom: 12px; }
 }

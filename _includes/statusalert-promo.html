@@ -1,0 +1,70 @@
+<div id="saPromo" class="sa-promo" role="complementary" aria-label="StatusAlert promotion" hidden>
+  <button id="saPromoClose" class="sa-close" type="button" aria-label="Minimize">&times;</button>
+  <h4>Is your site down right now?</h4>
+  <p>Try <strong>StatusAlert</strong> &ndash; website and server monitoring. 100% free while in public beta.</p>
+  <a id="saPromoCta" class="sa-cta" href="https://statusalert.io/?utm_source=cyberpunk.tools&amp;utm_medium=popup" target="_blank" rel="noopener">Try it free</a>
+</div>
+<button id="saPromoMini" class="sa-promo-mini" type="button" aria-label="Show StatusAlert offer" hidden>&#128276; Free monitoring (public beta)</button>
+
+<script>
+// StatusAlert promo: show after a short delay; the close button only minimizes
+// it to a small tab, and every page load starts expanded again.
+(function () {
+  var SHOW_DELAY_MS = 2000;
+
+  var promo = document.getElementById("saPromo");
+  var closeBtn = document.getElementById("saPromoClose");
+  var mini = document.getElementById("saPromoMini");
+  var cta = document.getElementById("saPromoCta");
+  if (!promo || !closeBtn || !mini || !cta) return;
+
+  function track(action) {
+    if (typeof gtag === "function") {
+      gtag("event", action, { event_category: "statusalert_promo" });
+    }
+  }
+
+  function expand() {
+    mini.hidden = true;
+    promo.hidden = false;
+    // Next frame so the slide-in (from the right, or the initial fade-up) animates.
+    requestAnimationFrame(function () {
+      promo.classList.remove("sa-minimized");
+      promo.classList.add("sa-visible");
+    });
+  }
+
+  function minimize() {
+    var done = false;
+    function finish() {
+      if (done) return;
+      done = true;
+      promo.removeEventListener("transitionend", finish);
+      promo.hidden = true;
+      mini.hidden = false;
+    }
+    promo.classList.add("sa-minimized");
+    promo.addEventListener("transitionend", finish);
+    setTimeout(finish, 1000); // fallback if transitionend never fires (slow devices)
+  }
+
+  setTimeout(function () {
+    expand();
+    track("promo_shown");
+  }, SHOW_DELAY_MS);
+
+  closeBtn.addEventListener("click", function () {
+    minimize();
+    track("promo_minimized");
+  });
+
+  mini.addEventListener("click", function () {
+    expand();
+    track("promo_reopened");
+  });
+
+  cta.addEventListener("click", function () {
+    track("promo_click");
+  });
+})();
+</script>

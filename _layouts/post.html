@@ -30,11 +30,6 @@ layout: base
     {{ content }}
   </div>
 
-  <div class="support-section">
-    <p>Want to support me? Check out my monitoring tool - it's free!</p>
-    <p><a href="https://statusalert.io" target="_blank"><img src="{{ '/assets/statusalert.png' | relative_url }}" alt="StatusAlert.io - Free Monitoring Tool" style="max-width: 300px; height: auto;" /></a></p>
-  </div>
-
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}
