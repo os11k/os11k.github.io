@@ -6,3 +6,4 @@ gemspec
 gem "kramdown-parser-gfm" if ENV["JEKYLL_VERSION"] == "~> 3.9"
 
 gem "jekyll", "~> 4.3"
+gem "jekyll-sitemap", "~> 1.4"

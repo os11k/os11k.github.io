@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Nagios for VoIP"
+description: "Install Nagios Core on Debian 8 and monitor any VoIP endpoint with the check_sip plugin, using a FreeSWITCH server as the example host to watch and alert on."
 date:   2016-04-11 19:10:00 +0200
 categories: jekyll update
 comments: true

@@ -1,6 +1,7 @@
 ---  
 layout: post
 title: "Best WordPress Cache Plugin"  
+description: "Cut WordPress response times from around 800ms to under 200ms with Cloudflare and the free Super Page Cache plugin, with step-by-step setup and real graphs."
 date: 2025-04-30 10:00:00 +0200
 categories: jekyll update  
 comments: true

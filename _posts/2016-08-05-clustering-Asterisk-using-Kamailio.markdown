@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Clustering Asterisk using Kamailio"
+description: "Build a two-node Asterisk cluster behind Kamailio using MySQL SIP realtime, a shared sipregs view and func_odbc so calls reach users on either server."
 date:   2016-08-05 7:10:00 +0200
 categories: jekyll update
 comments: true

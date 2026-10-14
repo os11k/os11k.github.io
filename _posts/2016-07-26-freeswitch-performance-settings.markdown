@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Freeswitch and performance tuning"
+description: "FreeSWITCH performance tuning on a minimal config: the exact logging, SIP profile, thread and database changes that let one server carry hundreds of calls."
 date:   2016-07-26 7:10:00 +0200
 categories: jekyll update
 comments: true

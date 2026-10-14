@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "How to Create a Widget for Meta Threads using Scriptable"
+description: "Build iOS home screen widgets for Meta Threads with the Scriptable app and the Threads API: follower counts, profile visitors and views on your latest post."
 date:   2024-10-26 16:01:00 +0200
 categories: jekyll update
 comments: true

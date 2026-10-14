@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How to Substitute SSH with AWS Session Manager"
+description: "Replace SSH with AWS Systems Manager Session Manager: set up the IAM role, close port 22 in the security group, and manage who can reach EC2 through IAM alone."
 date: 2025-01-07 18:35:00 +0200
 categories: jekyll update
 comments: true

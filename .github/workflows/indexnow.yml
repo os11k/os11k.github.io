@@ -1,0 +1,27 @@
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8  # v5.0.0
+        with:
+          fetch-depth: 0
+
+      # GitHub Pages builds the site separately after the push; give it time
+      # so the changed URLs are live before search engines are pinged.
+      - name: Wait for GitHub Pages deploy
+        run: sleep 120
+
+      - name: Submit changed URLs to IndexNow
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: python3 script/indexnow.py "$BEFORE" "$AFTER"

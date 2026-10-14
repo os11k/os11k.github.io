@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How to Store Terraform State in Azure with a Bit More Security in Mind"
+description: "Store Terraform state in Azure Storage more securely than the official docs: Entra ID auth instead of access keys, blob versioning and a locked-down account."
 date: 2025-02-15 19:00:00 +0200
 categories: jekyll update
 comments: true

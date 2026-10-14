@@ -1,6 +1,7 @@
 ---
 layout: post  
 title: "Using Grafana Loki as a Centralized Logging Solution"  
+description: "Set up Grafana Loki with Docker Compose as centralized logging for all your Docker containers, ship logs with the Loki Docker plugin and query them in Grafana."
 date: 2024-11-10 16:20:00 +0200
 categories: jekyll update  
 comments: true  

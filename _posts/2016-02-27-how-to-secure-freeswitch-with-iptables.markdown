@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Simple way to secure Freeswitch with iptables"
+description: "Lock down a FreeSWITCH PBX with a short iptables ruleset: allow only your office and SIP provider IPs, open the RTP port range and drop everything else."
 date:   2016-02-27 16:28:00 +0200
 categories: jekyll update
 comments: true

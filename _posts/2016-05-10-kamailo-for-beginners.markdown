@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Kamailio for beginners"
+description: "A plain-language introduction to Kamailio: what a SIP proxy does, how signaling differs from media, what an INVITE looks like, and a first routing config."
 date:   2016-05-10 7:10:00 +0200
 categories: jekyll update
 comments: true

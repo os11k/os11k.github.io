@@ -1,6 +1,7 @@
 ---  
 layout: post
 title: "How to manage Let's Encrypt certificate on EC2 instance"  
+description: "Issue and renew Let's Encrypt certificates on EC2 with Lego and the DNS-01 challenge, using an IAM instance profile scoped to the _acme-challenge record."
 date: 2025-03-31 10:00:00 +0200
 categories: jekyll update  
 comments: true  

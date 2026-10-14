@@ -1,6 +1,7 @@
 ---
 layout: post  
 title: "HOMER 7 Packet Manipulation Using Lua"  
+description: "Use Lua scripts in HOMER 7 heplify-server to rewrite captured SIP packets, with a worked example that changes the User-Agent header on CANCEL requests."
 date: 2024-11-24 18:00:00 +0200  
 categories: jekyll update  
 comments: true  

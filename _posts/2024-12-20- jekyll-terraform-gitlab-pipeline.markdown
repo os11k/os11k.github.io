@@ -1,6 +1,7 @@
 ---
 layout: post  
 title: "Jekyll Blog with Terraform (OpenTofu) Using GitLab Pipelines"
+description: "Deploy a Jekyll blog to Amazon S3 and CloudFront with Terraform or OpenTofu and a GitLab CI pipeline, including Route 53 DNS and automatic deploys on push."
 date: 2024-12-19 18:30:00 +0200  
 categories: jekyll update  
 comments: true  

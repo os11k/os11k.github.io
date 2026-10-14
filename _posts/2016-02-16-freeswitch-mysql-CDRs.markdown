@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Freeswitch 1.6 and MySQL CDRs on Debian 8"
+description: "Step-by-step guide to saving FreeSWITCH CDRs to MySQL on Debian: install unixODBC, configure odbc.ini, test the DSN and switch on mod_odbc_cdr."
 date:   2016-02-16 19:12:35 +0200
 categories: jekyll update
 comments: true
