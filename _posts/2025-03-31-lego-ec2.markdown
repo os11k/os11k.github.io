@@ -159,7 +159,7 @@ Visit [https://certdecoder.com/](https://certdecoder.com/) to verify the certifi
 
 Note: In the screenshot below, the example shows `certdecoder.com` instead of `my-domain.com`. The certificate is valid for 90 days.
 
-<img src="{{ '/assets/lego-ec2/1.webp' | relative_url }}" alt="Diagram" width="1600" height="1065" loading="lazy">
+<img src="{{ '/assets/lego-ec2/1.webp' | relative_url }}" alt="certdecoder.com showing a decoded certificate that is date-valid, issued by Let's Encrypt, valid from Mar 31 to Jun 29, 2025, for certdecoder.com and www.certdecoder.com" width="1600" height="1065" loading="lazy">
 
 The second certificate is Let’s Encrypt’s root certificate. You can inspect it if desired, though it is not essential for this guide.
 

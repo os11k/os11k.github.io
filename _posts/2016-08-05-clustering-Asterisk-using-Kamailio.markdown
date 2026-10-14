@@ -14,7 +14,7 @@ it will use same MySQL DB(please use separate sipregs table for each server, in 
 and you will need to install Kamailio with default configuration. Additionally we will use func_odbc on Asterisk, but it should be already compiled, 
 if you set up your Asterisk with SIP realtime using ODBC.
 
-<img src="{{ '/assets/asterisk.webp' | relative_url }}" alt="Diagram" width="697" height="721">
+<img src="{{ '/assets/asterisk.webp' | relative_url }}" alt="Architecture diagram: two SIP phones register through a Kamailio proxy that routes calls to Asterisk 1 and Asterisk 2, which both use a shared database" width="697" height="721">
 
 2) For Asterisk SIP realtime I recommend following 
 <a href="http://kb.asipto.com/asterisk:realtime:kamailio-4.0.x-asterisk-11.3.0-astdb">

@@ -18,7 +18,7 @@ I'm assuming that you are running Debian 8 and you will plan to use Flowroute
 (You can use any provider, in this manual I will use Flowroute ip-addresses as example) for calling in and out.
 In below rules is used port 5060, what usually belongs to internal profile, if you configure gateway in external profile, please change port to 5080.
 
-<img src="{{ '/assets/freeswitch.webp' | relative_url }}" alt="Diagram" width="646" height="281">
+<img src="{{ '/assets/freeswitch.webp' | relative_url }}" alt="Network diagram: a FreeSWITCH server in the middle, with the Flowroute SIP provider IPs 216.115.69.144 and 70.167.153.130 on one side and the office network 1.2.3.4 on the other" width="646" height="281">
 
 On this point we need to generate iptables rules, as you see from diagram above, we need to allow connection to our server from 3 ip-addresses. 
 Below is simple iptables rules, for our case:

@@ -131,4 +131,4 @@ docker compose up -d --build
 
 Log in to HOMER and check the `CANCEL` method. The `User-Agent` header should now be `cisco`. As you can see in my example, the same call is used, but the Invite has an untouched user agent `LinphoneiOS/5.2.4 (iPhone) LinphoneSDK/5.3.89`, while the Cancel has it changed to `cisco`:
 
-<img src="{{ '/assets/homer7-lua/0.webp' | relative_url }}" alt="Diagram" width="1600" height="728" loading="lazy">
+<img src="{{ '/assets/homer7-lua/0.webp' | relative_url }}" alt="HOMER 7 call flow with INVITE, 407, ACK, 100 Trying, CANCEL, 200 OK, 487 and ACK, and message details showing the INVITE User-Agent as LinphoneiOS while the CANCEL User-Agent reads cisco" width="1600" height="728" loading="lazy">

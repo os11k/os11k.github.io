@@ -251,7 +251,7 @@ Now we need to assign ourselves and anyone who requires access to the Terraform 
 
 To do this, go to **portal.azure.com** → **Storage accounts** → **tfstate4qymu** → **Access Control (IAM**) → **Add** → **Add role assignment** → Assign **"Storage Blob Data Contributor"** to your user.
 
-<img src="{{ '/assets/azure-storage/1.webp' | relative_url }}" alt="Diagram" width="1600" height="1020" loading="lazy">
+<img src="{{ '/assets/azure-storage/1.webp' | relative_url }}" alt="Azure portal Access Control (IAM) page for the tfstate4qymu storage account with the Add role assignment button" width="1600" height="1020" loading="lazy">
 
 ## Saving State to Azure Storage
 
@@ -360,7 +360,7 @@ This will migrate the state of the storage account and container to the blob sto
 
 Confirm with yes, and once the process is complete, your Terraform state configuration will be securely stored in the tfstate container under the key azure-storage-terraform-backend.tfstate.
 
-<img src="{{ '/assets/azure-storage/2.webp' | relative_url }}" alt="Diagram" width="1600" height="730" loading="lazy">
+<img src="{{ '/assets/azure-storage/2.webp' | relative_url }}" alt="Azure portal Storage browser showing the tfstate blob container with one Terraform state file, authenticated with a Microsoft Entra user account" width="1600" height="730" loading="lazy">
 
 ## Saving State for Other Resources
 

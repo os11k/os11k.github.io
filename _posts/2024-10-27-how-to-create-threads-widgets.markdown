@@ -10,7 +10,7 @@ comments: true
 
 This post will be a bit different. I recently started using Meta Threads, and I saw someone complaining that Meta should create a widget for certain stats. I replied, saying it should be possible using the Scriptable app. Long story short, I decided to dive into this rabbit hole and create some widgets for Meta Threads. I’ll be creating two widgets—one for follower counts and profile visitors for today and yesterday, and a second widget to display view counts for the latest post. I’ll be using the Scriptable app to make these, which you can download for free from the iOS App Store.
 
-<img src="{{ '/assets/threads_widget/0.webp' | relative_url }}" alt="Diagram" width="1097" height="1280" style="width: 25%;">
+<img src="{{ '/assets/threads_widget/0.webp' | relative_url }}" alt="iPhone home screen with two Scriptable widgets: one showing 302 followers and profile visitors today and yesterday, the other showing 86 views on the latest Threads post" width="1097" height="1280" style="width: 25%;">
 
 ## Step 1: Set Up the Meta App
 
@@ -20,49 +20,49 @@ Once you're there, the setup process is mostly "next-next-next."
 
 Select **"I don’t want to connect a business portfolio yet."**
 
-<img src="{{ '/assets/threads_widget/1.webp' | relative_url }}" alt="Diagram" width="1600" height="618">
+<img src="{{ '/assets/threads_widget/1.webp' | relative_url }}" alt="Meta for Developers Create an app wizard, Business step, with the option I don't want to connect a business portfolio yet selected" width="1600" height="618">
 
 Then, choose **"Access the Threads API"**.
 
-<img src="{{ '/assets/threads_widget/2.webp' | relative_url }}" alt="Diagram" width="1600" height="909">
+<img src="{{ '/assets/threads_widget/2.webp' | relative_url }}" alt="Add use cases step of the Meta app wizard with the Access the Threads API checkbox ticked" width="1600" height="909">
 
 Enter your app name and email:
 
-<img src="{{ '/assets/threads_widget/3.webp' | relative_url }}" alt="Diagram" width="1600" height="524">
+<img src="{{ '/assets/threads_widget/3.webp' | relative_url }}" alt="App details step with the app name set to statistic and a contact email filled in" width="1600" height="524">
 
 Click **"Go to Dashboard"**.
 
-<img src="{{ '/assets/threads_widget/4.webp' | relative_url }}" alt="Diagram" width="1600" height="495" loading="lazy">
+<img src="{{ '/assets/threads_widget/4.webp' | relative_url }}" alt="Finalize step of the Meta app wizard with a green Go to dashboard button" width="1600" height="495" loading="lazy">
 
 In the dashboard settings, continue with more "next-next-next."
 
-<img src="{{ '/assets/threads_widget/5.webp' | relative_url }}" alt="Diagram" width="1600" height="722" loading="lazy">
+<img src="{{ '/assets/threads_widget/5.webp' | relative_url }}" alt="Meta app dashboard listing three requirements: Access the Threads API, Test use cases and Finish customization" width="1600" height="722" loading="lazy">
 
 First, go to **"Access the Threads API"** and select **"threads_basic"** and **"threads_manage_insights"**—these are the bare minimum permissions needed for this project. If you want to do more, adjust your permissions accordingly.
 
-<img src="{{ '/assets/threads_widget/6.webp' | relative_url }}" alt="Diagram" width="1600" height="883" loading="lazy">
+<img src="{{ '/assets/threads_widget/6.webp' | relative_url }}" alt="Threads API permissions list where threads_basic and threads_manage_insights are added and marked Ready for testing" width="1600" height="883" loading="lazy">
 
 Then, click **"Test Use Cases"** (it should automatically show a green tick).
 
-<img src="{{ '/assets/threads_widget/7.webp' | relative_url }}" alt="Diagram" width="1600" height="709" loading="lazy">
+<img src="{{ '/assets/threads_widget/7.webp' | relative_url }}" alt="Meta app dashboard with green ticks on Access the Threads API and Test use cases, and Finish customization still pending" width="1600" height="709" loading="lazy">
 
 Finally, click **"Finish Customization"**.
 
-<img src="{{ '/assets/threads_widget/8.webp' | relative_url }}" alt="Diagram" width="1600" height="733" loading="lazy">
+<img src="{{ '/assets/threads_widget/8.webp' | relative_url }}" alt="Dialog asking Have you finished building this app? with a Yes, I'm finished button" width="1600" height="733" loading="lazy">
 
 ## Step 2: Add Roles
 
 Now, go to **"App Roles"** and then to **"Roles"**.
 
-<img src="{{ '/assets/threads_widget/9.webp' | relative_url }}" alt="Diagram" width="1353" height="1521" loading="lazy" style="width: 25%;">
+<img src="{{ '/assets/threads_widget/9.webp' | relative_url }}" alt="Meta app sidebar with App roles expanded, showing the Roles and Test Users entries" width="1353" height="1521" loading="lazy" style="width: 25%;">
 
 Click **"Add People"** and select **"Threads Tester."** Below that, add your own user, as shown in the screenshot:
 
-<img src="{{ '/assets/threads_widget/10.webp' | relative_url }}" alt="Diagram" width="1600" height="752" loading="lazy">
+<img src="{{ '/assets/threads_widget/10.webp' | relative_url }}" alt="Add people to your app dialog with the Threads Tester role selected and a user entered in the search field" width="1600" height="752" loading="lazy">
 
 Now, open the Threads app with that user. Go to **Settings > Account > Website Permissions > Invites** and accept the invite.
 
-<img src="{{ '/assets/threads_widget/11.webp' | relative_url }}" alt="Diagram" width="1600" height="1024" loading="lazy">
+<img src="{{ '/assets/threads_widget/11.webp' | relative_url }}" alt="Threads app Settings, Account tab, with the Website permissions Invites list showing an invite from the statistic app and Accept and Decline buttons" width="1600" height="1024" loading="lazy">
 
 ## Step 3: Get an Access Token
 
@@ -70,15 +70,15 @@ Now, we need to get a token. Go to the [Facebook Developer Explorer](https://dev
 
 Select **"threads.net"** and click **"Generate Threads Access Token"**.
 
-<img src="{{ '/assets/threads_widget/12.webp' | relative_url }}" alt="Diagram" width="1600" height="598" loading="lazy">
+<img src="{{ '/assets/threads_widget/12.webp' | relative_url }}" alt="Graph API Explorer set to graph.threads.net with an empty Access Token field and a Generate Threads Access Token button" width="1600" height="598" loading="lazy">
 
 When the Threads pop-up appears, just click **"Continue."**
 
-<img src="{{ '/assets/threads_widget/13.webp' | relative_url }}" alt="Diagram" width="1600" height="1227" loading="lazy">
+<img src="{{ '/assets/threads_widget/13.webp' | relative_url }}" alt="Threads consent pop-up listing the permissions the statistic app requests, with a Continue As button" width="1600" height="1227" loading="lazy">
 
 You’ll now see your token in the **"Access Token"** field.
 
-<img src="{{ '/assets/threads_widget/14.webp' | relative_url }}" alt="Diagram" width="1600" height="734" loading="lazy">
+<img src="{{ '/assets/threads_widget/14.webp' | relative_url }}" alt="Graph API Explorer with a generated token filled into the Access Token field" width="1600" height="734" loading="lazy">
 
 Validate that your token works by using the **"Access Token Debugger":**
 
@@ -86,7 +86,7 @@ Validate that your token works by using the **"Access Token Debugger":**
 
 If it shows something similar to the screenshot below, then you’re good to go.
 
-<img src="{{ '/assets/threads_widget/15.webp' | relative_url }}" alt="Diagram" width="1600" height="913" loading="lazy">
+<img src="{{ '/assets/threads_widget/15.webp' | relative_url }}" alt="Meta Access Token Debugger showing a valid user token for the statistic app with threads_basic and other scopes" width="1600" height="913" loading="lazy">
 
 ## Step 4: Exchange for a Long-Lived Token
 
@@ -99,7 +99,7 @@ curl -s -X GET "https://graph.threads.net/access_token?grant_type=th_exchange_to
 
 Since we’re missing `THREADS_APP_SECRET`, go to [Facebook Apps](https://developers.facebook.com/apps/?show_reminder=true), select your app, and go to **"App Settings"** > **"Basic"**. You’ll see a screen like this:
 
-<img src="{{ '/assets/threads_widget/16.webp' | relative_url }}" alt="Diagram" width="1600" height="776" loading="lazy">
+<img src="{{ '/assets/threads_widget/16.webp' | relative_url }}" alt="Meta app settings, Basic page, showing the App ID and a hidden App secret with a Show button" width="1600" height="776" loading="lazy">
 
 Click **"Show"** next to **"App Secret"**.
 

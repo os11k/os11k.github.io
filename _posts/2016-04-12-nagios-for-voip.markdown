@@ -183,4 +183,4 @@ echo "Test test" | mail -s "Test" my@email.com
 24) If you will receive e-mail this means that your set-up is ready and you can try to login to: http://YOUR_IP/nagios and use nagiosadmin and password which you created at point 12. 
 Go to Services and you will see similar to this page:
 
-<img src="{{ '/assets/nagios.webp' | relative_url }}" alt="nagios" width="1600" height="592" loading="lazy">
+<img src="{{ '/assets/nagios.webp' | relative_url }}" alt="Nagios web interface showing Service Status Details with one host, freeswitch, and its VoIP service in green OK state" width="1600" height="592" loading="lazy">

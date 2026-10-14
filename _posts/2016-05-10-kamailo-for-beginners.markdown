@@ -12,7 +12,7 @@ comments: true
 media and signaling. Media is audio or video for a call, signaling is a requests and responses for call initialization, call forwarding and etc. 
 With SIP you can do audio, video calls, instant messaging and etc. Simple call flow with Kamailio:
 
-<img src="{{ '/assets/kamailio.webp' | relative_url }}" alt="Diagram" width="649" height="741">
+<img src="{{ '/assets/kamailio.webp' | relative_url }}" alt="SIP call flow diagram between Alice, a Kamailio proxy and Bob: INVITE, 100 Trying, 180 Ringing, 200 OK and ACK form the first transaction, RTP media flows directly between the phones, then BYE and 200 OK end the dialog" width="649" height="741">
 
 Above call flow is just one possible way to establish a call using SIP proxy, in some other cases you might want to have all SIP requests to be 
 passed through Kamailio including ACK and BYE. Kamailio will handle only SIP request and responses(Invite, Ack, Trying, ...), 

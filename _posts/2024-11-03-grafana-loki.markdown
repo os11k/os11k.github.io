@@ -145,14 +145,14 @@ telnet loki-ip 3100
 
 Now you should be able to see logs in Grafana. Go to the "Explore" section, and make sure "Loki" is selected in the top-left dropdown menu:
 
-<img src="{{ '/assets/loki/1.webp' | relative_url }}" alt="Diagram" width="1600" height="545" loading="lazy">
+<img src="{{ '/assets/loki/1.webp' | relative_url }}" alt="Grafana Explore page with Loki selected as the data source and an empty query builder" width="1600" height="545" loading="lazy">
 
 Then, click on "Label Browser" and select the appropriate label. In this example, it’s `compose_project => random-logger`. Then click "Show logs":
 
-<img src="{{ '/assets/loki/2.webp' | relative_url }}" alt="Diagram" width="1600" height="785" loading="lazy">
+<img src="{{ '/assets/loki/2.webp' | relative_url }}" alt="Grafana Loki label browser with compose_project selected and the value random-logger, resulting selector {compose_project=&quot;random-logger&quot;} and a Show logs button" width="1600" height="785" loading="lazy">
 
 After clicking "Show logs," you should see your logs:
 
-<img src="{{ '/assets/loki/3.webp' | relative_url }}" alt="Diagram" width="1600" height="804" loading="lazy">
+<img src="{{ '/assets/loki/3.webp' | relative_url }}" alt="Grafana Explore showing a logs volume chart and a list of log lines from the random-logger container" width="1600" height="804" loading="lazy">
 
 That’s it! At this point, you've successfully set up Grafana with Loki, and your Docker containers should be sending logs to it. For the next steps, you might consider setting up data retention policies in Loki and creating custom dashboards — I’ll leave that as a homework exercise.
