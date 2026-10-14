@@ -25,6 +25,19 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Minima theme files kept in the repo that must not become pages or static files.
+# GitHub Pages renders Markdown without front matter (jekyll-optional-front-matter),
+# so History.markdown would otherwise end up in the sitemap as /History.html.
+exclude:
+  - History.markdown
+  - README.md
+  - CODE_OF_CONDUCT.md
+  - LICENSE.txt
+  - minima.gemspec
+  - readme_banner.svg
+  - screenshot.png
+  - script
+
 # Theme-specific settings
 
 # If you want to link only specific pages in your header, use this and add the path to the pages
