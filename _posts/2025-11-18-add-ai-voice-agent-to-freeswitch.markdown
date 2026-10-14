@@ -2,13 +2,14 @@
 layout: post
 title: "Add AI Voice Agent to FreeSWITCH in 30 Minutes"
 description: "Connect FreeSWITCH to an ElevenLabs AI voice agent in about 30 minutes with mod_audio_stream and a small WebSocket bridge, so any extension can dial the agent."
+tags: [freeswitch, ai, elevenlabs, websocket, voip]
 date: 2025-11-18 10:00:00 +0200
 categories: jekyll update
 comments: true
 image: /assets/ai.png
 ---
 
-### Overview
+## Overview
 
 Today I'll explain how to connect your PBX to a real AI agent from ElevenLabs or any other AI agents that can communicate via WebSockets. We'll focus on ElevenLabs, and our WebSocket server is designed to use ElevenLabs, but it can be easily adjusted for any other AI provider.
 

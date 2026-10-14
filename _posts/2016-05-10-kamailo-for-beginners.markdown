@@ -2,6 +2,7 @@
 layout: post
 title:  "Kamailio for beginners"
 description: "A plain-language introduction to Kamailio: what a SIP proxy does, how signaling differs from media, what an INVITE looks like, and a first routing config."
+tags: [kamailio, sip, voip]
 date:   2016-05-10 7:10:00 +0200
 categories: jekyll update
 comments: true
@@ -11,7 +12,7 @@ comments: true
 media and signaling. Media is audio or video for a call, signaling is a requests and responses for call initialization, call forwarding and etc. 
 With SIP you can do audio, video calls, instant messaging and etc. Simple call flow with Kamailio:
 
-![Diagram]({{ site.url }}/assets/kamailio.png)
+<img src="{{ '/assets/kamailio.webp' | relative_url }}" alt="Diagram" width="649" height="741">
 
 Above call flow is just one possible way to establish a call using SIP proxy, in some other cases you might want to have all SIP requests to be 
 passed through Kamailio including ACK and BYE. Kamailio will handle only SIP request and responses(Invite, Ack, Trying, ...), 

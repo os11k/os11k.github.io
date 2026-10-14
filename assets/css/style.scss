@@ -84,3 +84,29 @@
   }
   .sa-promo-mini { right: 12px; bottom: 12px; }
 }
+
+// Images carry width/height attributes for layout stability; keep the aspect
+// ratio when the theme's max-width: 100% scales them down.
+.post-content img {
+  height: auto;
+}
+
+.related-posts {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e8e8e8;
+}
+.related-posts h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.related-posts ul {
+  list-style: none;
+  margin-left: 0;
+}
+.related-posts li {
+  margin-bottom: 0.4rem;
+}
+.related-posts .post-meta {
+  margin-left: 0.4rem;
+}

@@ -2,6 +2,7 @@
 layout: post  
 title: "Using Grafana Loki as a Centralized Logging Solution"  
 description: "Set up Grafana Loki with Docker Compose as centralized logging for all your Docker containers, ship logs with the Loki Docker plugin and query them in Grafana."
+tags: [grafana, loki, docker, logging, monitoring]
 date: 2024-11-10 16:20:00 +0200
 categories: jekyll update  
 comments: true  
@@ -144,14 +145,14 @@ telnet loki-ip 3100
 
 Now you should be able to see logs in Grafana. Go to the "Explore" section, and make sure "Loki" is selected in the top-left dropdown menu:
 
-![Diagram]({{ site.url }}/assets/loki/1.png)
+<img src="{{ '/assets/loki/1.webp' | relative_url }}" alt="Diagram" width="1600" height="545" loading="lazy">
 
 Then, click on "Label Browser" and select the appropriate label. In this example, it’s `compose_project => random-logger`. Then click "Show logs":
 
-![Diagram]({{ site.url }}/assets/loki/2.png)
+<img src="{{ '/assets/loki/2.webp' | relative_url }}" alt="Diagram" width="1600" height="785" loading="lazy">
 
 After clicking "Show logs," you should see your logs:
 
-![Diagram]({{ site.url }}/assets/loki/3.png)
+<img src="{{ '/assets/loki/3.webp' | relative_url }}" alt="Diagram" width="1600" height="804" loading="lazy">
 
 That’s it! At this point, you've successfully set up Grafana with Loki, and your Docker containers should be sending logs to it. For the next steps, you might consider setting up data retention policies in Loki and creating custom dashboards — I’ll leave that as a homework exercise.

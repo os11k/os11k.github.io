@@ -2,6 +2,7 @@
 layout: post
 title:  "Freeswitch 1.6 install on Debian 8 from git"
 description: "Build FreeSWITCH 1.6 from git on Debian 8 in one page: dependencies, compiling, sound files, a system user, init script and the post-install steps docs miss."
+tags: [freeswitch, debian]
 date:   2016-02-23 19:38:00 +0200
 categories: jekyll update
 comments: true

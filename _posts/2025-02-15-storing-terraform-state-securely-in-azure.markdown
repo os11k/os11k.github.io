@@ -2,6 +2,7 @@
 layout: post
 title: "How to Store Terraform State in Azure with a Bit More Security in Mind"
 description: "Store Terraform state in Azure Storage more securely than the official docs: Entra ID auth instead of access keys, blob versioning and a locked-down account."
+tags: [terraform, azure, security]
 date: 2025-02-15 19:00:00 +0200
 categories: jekyll update
 comments: true
@@ -250,7 +251,7 @@ Now we need to assign ourselves and anyone who requires access to the Terraform 
 
 To do this, go to **portal.azure.com** → **Storage accounts** → **tfstate4qymu** → **Access Control (IAM**) → **Add** → **Add role assignment** → Assign **"Storage Blob Data Contributor"** to your user.
 
-![Diagram]({{ site.url }}/assets/azure-storage/1.png)
+<img src="{{ '/assets/azure-storage/1.webp' | relative_url }}" alt="Diagram" width="1600" height="1020" loading="lazy">
 
 ## Saving State to Azure Storage
 
@@ -359,7 +360,7 @@ This will migrate the state of the storage account and container to the blob sto
 
 Confirm with yes, and once the process is complete, your Terraform state configuration will be securely stored in the tfstate container under the key azure-storage-terraform-backend.tfstate.
 
-![Diagram]({{ site.url }}/assets/azure-storage/2.png)
+<img src="{{ '/assets/azure-storage/2.webp' | relative_url }}" alt="Diagram" width="1600" height="730" loading="lazy">
 
 ## Saving State for Other Resources
 

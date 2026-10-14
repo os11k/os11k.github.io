@@ -2,6 +2,7 @@
 layout: post
 title: "How to manage Let's Encrypt certificate on EC2 instance"  
 description: "Issue and renew Let's Encrypt certificates on EC2 with Lego and the DNS-01 challenge, using an IAM instance profile scoped to the _acme-challenge record."
+tags: [aws, letsencrypt, tls, terraform]
 date: 2025-03-31 10:00:00 +0200
 categories: jekyll update  
 comments: true  
@@ -10,15 +11,15 @@ image: /assets/lego-ec2/2.png
 
 In this guide, I’ll provide a short manual on how to create and manage Let’s Encrypt certificates on your EC2 instance using [Lego](https://go-acme.github.io/lego/) (a Let's Encrypt/ACME client and library written in Go). We’ll use the DNS-01 challenge, and the instance will have an appropriate IAM role so only the instance itself can manage the `_acme-challenge` TXT record for the domain.
 
-### Why use Let's Encrypt on EC2?
+## Why use Let's Encrypt on EC2?
 
 Why even bother using Let’s Encrypt in AWS? First of all — simpler setup. You don’t need an ALB or CloudFront, which also means lower cost. Sometimes, your application isn’t something you can easily put behind a load balancer — for example, any SIP proxy. So in some cases, you’ll want Let’s Encrypt certs directly on the EC2 instance.
 
-### Why DNS-01 challenge?
+## Why DNS-01 challenge?
 
 If you’re running a SIP application, why open port 80 at all if you don’t need to? Or maybe port 80 is already being used by another service. Personally, I just prefer the DNS-01 challenge — fewer firewall holes to worry about.
 
-### Overview
+## Overview
 
 We’ll create an instance profile and assign it to our EC2 instance so the instance itself can have permissions to add or remove DNS records, which is required for the DNS-01 challenge.
 
@@ -158,7 +159,7 @@ Visit [https://certdecoder.com/](https://certdecoder.com/) to verify the certifi
 
 Note: In the screenshot below, the example shows `certdecoder.com` instead of `my-domain.com`. The certificate is valid for 90 days.
 
-![Diagram]({{ site.url }}/assets/lego-ec2/1.png)
+<img src="{{ '/assets/lego-ec2/1.webp' | relative_url }}" alt="Diagram" width="1600" height="1065" loading="lazy">
 
 The second certificate is Let’s Encrypt’s root certificate. You can inspect it if desired, though it is not essential for this guide.
 

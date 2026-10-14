@@ -2,6 +2,7 @@
 layout: post
 title:  "Running performance test on Freeswitch using SIPp"
 description: "Compile SIPp with pcap support on Debian 8 and load test FreeSWITCH with UAC and UAS scenarios to measure how many calls per second your server handles."
+tags: [freeswitch, sipp, performance]
 date:   2016-03-14 07:10:00 +0200
 categories: jekyll update
 comments: true

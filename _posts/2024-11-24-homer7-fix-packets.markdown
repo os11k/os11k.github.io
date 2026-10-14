@@ -2,6 +2,7 @@
 layout: post  
 title: "HOMER 7 Packet Manipulation Using Lua"  
 description: "Use Lua scripts in HOMER 7 heplify-server to rewrite captured SIP packets, with a worked example that changes the User-Agent header on CANCEL requests."
+tags: [homer, sip, lua, docker, voip]
 date: 2024-11-24 18:00:00 +0200  
 categories: jekyll update  
 comments: true  
@@ -130,4 +131,4 @@ docker compose up -d --build
 
 Log in to HOMER and check the `CANCEL` method. The `User-Agent` header should now be `cisco`. As you can see in my example, the same call is used, but the Invite has an untouched user agent `LinphoneiOS/5.2.4 (iPhone) LinphoneSDK/5.3.89`, while the Cancel has it changed to `cisco`:
 
-![Diagram]({{ site.url }}/assets/homer7-lua/0.png)
+<img src="{{ '/assets/homer7-lua/0.webp' | relative_url }}" alt="Diagram" width="1600" height="728" loading="lazy">

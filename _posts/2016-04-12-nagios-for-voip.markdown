@@ -2,12 +2,13 @@
 layout: post
 title:  "Nagios for VoIP"
 description: "Install Nagios Core on Debian 8 and monitor any VoIP endpoint with the check_sip plugin, using a FreeSWITCH server as the example host to watch and alert on."
+tags: [nagios, monitoring, freeswitch, voip]
 date:   2016-04-11 19:10:00 +0200
 categories: jekyll update
 comments: true
 ---
 In this post I will try to provide step-by-step instruction for installing and configuring Nagios on Debian 8 for monitoring any VoIP end-point, 
-I will use Freeswitch(10.10.10.10:5060) with default config from my previous manual as destination host which we will monitor. All below steps should be executed on Nagios 
+I will use Freeswitch(10.10.10.10:5060) with default config from my [previous manual on installing FreeSWITCH]({% post_url 2016-02-23-freeswitch-1.6-install-on-debian-8-from-git %}) as destination host which we will monitor. All below steps should be executed on Nagios 
 server by `root` user, I'm assuming VoIP endpoint is ready.
 
 1) We will need to install LAMP:
@@ -182,4 +183,4 @@ echo "Test test" | mail -s "Test" my@email.com
 24) If you will receive e-mail this means that your set-up is ready and you can try to login to: http://YOUR_IP/nagios and use nagiosadmin and password which you created at point 12. 
 Go to Services and you will see similar to this page:
 
-![nagios]({{ site.url }}/assets/nagios.png)
+<img src="{{ '/assets/nagios.webp' | relative_url }}" alt="nagios" width="1600" height="592" loading="lazy">

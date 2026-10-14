@@ -75,3 +75,12 @@ minima:
   #  - { platform: youtube,        user_url: "https://www.youtube.com/jekyll" }
 
 google_analytics: G-P89CC736VG
+
+# Used by jekyll-seo-tag for the author/publisher sameAs links in structured data.
+social:
+  name: Jurijs Ivolga
+  links:
+    - https://github.com/os11k
+    - https://www.linkedin.com/in/jurijs-ivolga/
+    - https://bsky.app/profile/cyberpunk.tools
+    - https://www.threads.com/@jurijs_iv

@@ -2,6 +2,7 @@
 layout: post
 title:  "Simple way to secure Freeswitch with iptables"
 description: "Lock down a FreeSWITCH PBX with a short iptables ruleset: allow only your office and SIP provider IPs, open the RTP port range and drop everything else."
+tags: [freeswitch, security, iptables]
 date:   2016-02-27 16:28:00 +0200
 categories: jekyll update
 comments: true
@@ -12,12 +13,12 @@ where most phones should be located and I assume that your office network has st
 
 **Think twice before opening your PBX to everybody in internet.**
 
-I'm assuming that you already installed Freeswitch, as it was described in my previous manual.
+I'm assuming that you already installed Freeswitch, as it was described in my [previous manual on installing FreeSWITCH from git]({% post_url 2016-02-23-freeswitch-1.6-install-on-debian-8-from-git %}).
 I'm assuming that you are running Debian 8 and you will plan to use Flowroute
 (You can use any provider, in this manual I will use Flowroute ip-addresses as example) for calling in and out.
 In below rules is used port 5060, what usually belongs to internal profile, if you configure gateway in external profile, please change port to 5080.
 
-![Diagram]({{ site.url }}/assets/freeswitch.png)
+<img src="{{ '/assets/freeswitch.webp' | relative_url }}" alt="Diagram" width="646" height="281">
 
 On this point we need to generate iptables rules, as you see from diagram above, we need to allow connection to our server from 3 ip-addresses. 
 Below is simple iptables rules, for our case:
