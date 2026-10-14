@@ -11,10 +11,10 @@ My articles have been featured in several mailing lists including [tldr.tech](ht
 
 Now I'm building [statusalert.io](https://statusalert.io/) — a simple monitoring tool for websites & servers 🔭🚨
 
-I built [certdecoder.com](https://certdecoder.com/), a free online tool for decoding X.509 certificates directly in your browser 🔍🔐
+I built [certdecoder.com](https://certdecoder.com/) — a free tool for decoding X.509 certificates in your browser 🔍🔐
 
 I also built [banana.dog](https://banana.dog/) — a tools directory 🍌🐶
 
-I also run [howmanyofme.one](https://howmanyofme.one/) — a quirky name-check tool, not to be taken too seriously 😅👀
+I also run [howmanyofme.one](https://howmanyofme.one/) — a name-frequency tool using real US Census and SSA data 📊👀
 
 And I created [randomobjectgenerator.one](https://randomobjectgenerator.one/) — a simple tool to generate random objects 🎲🧩
