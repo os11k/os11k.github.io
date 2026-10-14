@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Add AI Voice Agent to FreeSWITCH in 30 Minutes"
+title: "mod_audio_stream: Add an AI Voice Agent to FreeSWITCH in 30 Minutes"
 description: "Connect FreeSWITCH to an ElevenLabs AI voice agent in about 30 minutes with mod_audio_stream and a small WebSocket bridge, so any extension can dial the agent."
 tags: [freeswitch, ai, elevenlabs, websocket, voip]
 date: 2025-11-18 10:00:00 +0200
