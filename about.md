@@ -9,7 +9,7 @@ With almost 20 years in IT, I've worked on everything from VoIP and SIP to tackl
 
 My articles have been featured in several mailing lists including [tldr.tech](https://tldr.tech/) DevOps newsletter (200k+ readers), [Terraform Weekly](https://www.terraformweekly.com/), and [mkdev.me](https://mkdev.me/).
 
-Now I'm building [statusalert.io](https://statusalert.io/) — a simple monitoring tool for websites & servers 🔭🚨
+Now I'm building [statusalert.io](https://statusalert.io/?utm_source=cyberpunk.tools&utm_medium=about) — a simple monitoring tool for websites & servers 🔭🚨
 
 I built [certdecoder.com](https://certdecoder.com/) — a free tool for decoding X.509 certificates in your browser 🔍🔐
 
